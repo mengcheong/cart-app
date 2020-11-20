@@ -4,12 +4,20 @@ import mongoose from 'mongoose';
 //import data from "./data.js";
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
+import dotenv from 'dotenv';
+import Cors from 'cors';
 
 
 //uYzCZHgWQxrGlGZI
 //mongodb+srv://admin:<password>@cluster0.0adni.mongodb.net/<dbname>?retryWrites=true&w=majority
 const connection_url = 'mongodb+srv://admin:uYzCZHgWQxrGlGZI@cluster0.0adni.mongodb.net/cartdb?retryWrites=true&w=majority';
+
+dotenv.config();
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(Cors());
 
 mongoose.connect(connection_url,{
   useNewUrlParser:true,
