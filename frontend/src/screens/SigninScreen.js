@@ -19,14 +19,21 @@ function SigninScreen(props) {
     const redirect = props.location.search
     ? props.location.search.split('=')[1]
     : '/';
+    //const redirect = '/shipping';
+    //alert(redirect)
 
     const userSignIn = useSelector((state) => state.userSignIn);
     const {userInfo,loading,error} = userSignIn;
 
     useEffect(() => {
         if (userInfo) {
+            //alert(redirect)
           props.history.push(redirect);
         }
+        else{
+            //alert('fsfff')
+        }
+       //alert('fsfff',userInfo)
       }, [props.history, redirect, userInfo]);
 
     const dispatch = useDispatch();
@@ -62,11 +69,11 @@ function SigninScreen(props) {
                 </div>
             </div>
             <div>
-                <label></label>
+                <label/>
                 <button className="primary" type="submit">Sign In</button>
             </div>
             <div>
-                <label></label>
+                <label/>
                 <div>
                     New Customer? {' '}
                     <Link to={`/register?redirect=${redirect}`}>Create your account</Link>
