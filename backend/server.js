@@ -9,7 +9,7 @@ import Cors from 'cors';
 
 
 
-const connection_url = '';
+const connection_url = 'mongodb+srv://admin:uYzCZHgWQxrGlGZI@cluster0.0adni.mongodb.net/cartdb?retryWrites=true&w=majority';
 
 dotenv.config();
 const app = express();
