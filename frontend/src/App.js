@@ -68,7 +68,7 @@ function App() {
       <Route path="/payment" component={PaymentMethodScreen} exact></Route>
 
     </main>
-      <footer className="row center">All right reserved</footer>
+      <footer className="row center">2021 All right reserved</footer>
     </div>
     </BrowserRouter>
   );
