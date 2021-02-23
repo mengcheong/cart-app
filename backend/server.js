@@ -8,9 +8,8 @@ import dotenv from 'dotenv';
 import Cors from 'cors';
 
 
-//uYzCZHgWQxrGlGZI
-//mongodb+srv://admin:<password>@cluster0.0adni.mongodb.net/<dbname>?retryWrites=true&w=majority
-const connection_url = 'mongodb+srv://admin:uYzCZHgWQxrGlGZI@cluster0.0adni.mongodb.net/cartdb?retryWrites=true&w=majority';
+
+const connection_url = '';
 
 dotenv.config();
 const app = express();
